@@ -1,40 +1,46 @@
-*{
+* {
     box-sizing: border-box;
     font-family: 'Livvic', sans-serif;
 }
-html, body{
+
+html, body {
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
     background-color: #eaeaea;
 }
-main{
+
+main {
     position: relative;
     min-height: 100%;
     padding-bottom: 110px;
 }
-.clear-fix{
+
+.clear-fix {
     clear: both;
 }
-header{
+
+header {
     padding: 20px;
     background-color: #2196F3;
     color: #ffffff;
     text-align: center;
-    margin-bottom:  10px;
+    margin-bottom: 10px;
     height: 60px;
 }
-footer{
+
+footer {
     padding: 30px 0;
     background-color: #607D8B;
-    margin-top:  10px;
+    margin-top: 10px;
     height: 100px;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
-footer .links{
+
+footer .links {
     display: block;
     width: 100%;
     max-width: 200px;
@@ -42,14 +48,17 @@ footer .links{
     color: #acd7ff;
     font-size: 11px;
 }
-footer .links a{
+
+footer .links a {
     text-decoration: none;
     color: #acd7ff;
 }
-footer .links a:hover{
+
+footer .links a:hover {
     text-decoration: underline;
 }
-#container{
+
+#container {
     width: 80%;
     max-width: 900px;
     min-width: 320px;
@@ -57,30 +66,37 @@ footer .links a:hover{
     background-color: #ffffff;
     margin: 0 auto;
 }
-#profile{
+
+#profile {
     border-bottom: 1px dashed #a7a7a7;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
-#profile div:not(.clear-fix){
+
+#profile div:not(.clear-fix) {
     height: 190px;
     float: left;
     position: relative;
 }
-#profile .avatar{
+
+#profile .avatar {
     width: 35%;
     text-align: center;
 }
-#profile .avatar img{
+
+#profile .avatar img {
     width: 180px;
 }
-#profile .info{
+
+#profile .info {
     width: 45%;
 }
-#profile #gpa{
+
+#profile #gpa {
     width: 20%;
 }
-#profile #gpa strong{
+
+#profile #gpa strong {
     position: absolute;
     width: 100%;
     height: 60px;
@@ -94,34 +110,39 @@ footer .links a:hover{
     text-align: center;
 }
 
-.content{
+.content {
     padding: 10px;
     border: 1px solid #cbcbcb;
 }
-table{
+
+table {
     width: 100%;
     border-collapse: collapse;
 
 }
 
-table th{
+table th {
     padding: 8px 12px;
     text-align: left;
     border: 1px solid #cbcbcb;
     background-color: #03A9F4;
     color: #ffffff;
 }
-table td{
+
+table td {
     padding: 8px 12px;
     border: 1px solid #cbcbcb;
 }
-.content .tab{
+
+.content .tab {
     display: none;
 }
-.content .tab.active{
+
+.content .tab.active {
     display: block;
 }
-.controls .pill{
+
+.controls .pill {
     border: 1px solid #cbcbcb;
     background-color: #eaeaea;
     padding: 10px;
@@ -131,36 +152,43 @@ table td{
     margin-top: -1px;
     outline: none !important;
 }
-.controls .pill.active{
+
+.controls .pill.active {
     background-color: #ffffff;
     border-top: 1px solid #ffffff;
 }
-.controls .pill:hover{
+
+.controls .pill:hover {
     cursor: pointer;
 }
-.blue-button{
+
+.blue-button {
     background-color: #2196F3;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
 }
-.green-button{
+
+.green-button {
     background-color: #69f378;
     color: #ffffff;
     border: none;
     padding: 10px 10px;
 }
-.grey-button{
+
+.grey-button {
     background-color: #e1e8e6;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
 }
-.input{
+
+.input {
     border: 1px solid #cccccc;
     padding: 10px 20px;
     min-width: 135px;
 }
-#add-course{
+
+#add-course {
     display: none;
 }
