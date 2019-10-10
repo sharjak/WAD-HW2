@@ -29,4 +29,14 @@ $(function () {
 
         }
     }
+
+    $(".pill").click(function (event) {
+        if (!$(event.target).hasClass("active")) {
+            $(".pill").removeClass("active");
+            $(this).addClass("active");
+            $(".tab").removeClass("active");
+            let targetContainerId = "#" + event.target.id.split("-")[0] + "-container";
+            $(targetContainerId).addClass("active");
+        }
+    });
 });
