@@ -39,4 +39,8 @@ $(function () {
             $(targetContainerId).addClass("active");
         }
     });
+
+    $("#add-course-button").click(function (event) {
+        $("#add-course").toggle();
+    })
 });
