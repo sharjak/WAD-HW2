@@ -26,7 +26,6 @@ $(function () {
             tr.append(semester);
             tr.append(grade);
             coursesTableBody.append(tr);
-
         }
     }
 
@@ -42,5 +41,29 @@ $(function () {
 
     $("#add-course-button").click(function (event) {
         $("#add-course").toggle();
-    })
+    });
+
+    $("#save-course").click(function (event) {       
+        let inputTitle = $("#title").val();
+        let inputSemester = $("#semester").val();
+        let inputGrade = $("#grade").val();
+
+        let coursesTableBody = $("#courses tbody");
+        let tr = $("<tr></tr>");
+
+        courses.push(new Course(inputTitle, inputSemester, inputGrade));
+
+        let rowId = $("<td></td>").text(courses.length);
+        let courseTitle = $("<td></td>").text(inputTitle);
+        let semester = $("<td></td>").text(inputSemester);
+        let grade = $("<td></td>").text(inputGrade);
+
+        tr.append(rowId);
+        tr.append(courseTitle);
+        tr.append(semester);
+        tr.append(grade);
+        coursesTableBody.append(tr);
+
+    });
+    
 });
