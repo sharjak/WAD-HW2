@@ -1,5 +1,5 @@
 $(function () {
-    let user = new User("Jaanus", "Talvik", "21/04/1997", "Software Development", 4.35);
+    let user = new User("Jaanus", "Talvik", "21/04/1997", "Software Development");
     let courses = [
         new Course("Object-oriented programming", 1, 95),
         new Course("Programming in Python", 1, 100),
@@ -12,7 +12,7 @@ $(function () {
         $("#name").text(user.firstname + " " + user.lastname);
         $("#birthdate").text(user.birthdate);
         $("#faculty").text(user.faculty);
-        $("#gpa strong").text(user.gpa);
+        $("#gpa strong").text(calculateGPA());
 
         let coursesTableBody = $("#courses tbody");
         for (let i = 0; i < courses.length; i++) {
@@ -51,7 +51,7 @@ $(function () {
         let coursesTableBody = $("#courses tbody");
         let tr = $("<tr></tr>");
 
-        courses.push(new Course(inputTitle, inputSemester, inputGrade));
+        courses.push(new Course(inputTitle, parseInt(inputSemester), parseInt(inputGrade)));
 
         let rowId = $("<td></td>").text(courses.length);
         let courseTitle = $("<td></td>").text(inputTitle);
@@ -64,6 +64,23 @@ $(function () {
         tr.append(grade);
         coursesTableBody.append(tr);
 
+        $("#gpa strong").text(calculateGPA());
+
     });
+
+    function calculateGPA() {
+        let sum = 0;
+        for (let i = 0; i < courses.length; i++) {
+            let grade = courses[i].grade;
+            if (grade > 90) sum += 4;
+            else if (grade > 80) sum += 3;
+            else if (grade > 70) sum += 2;
+            else if (grade > 60) sum += 1;
+            else if (grade > 50) sum += 0.5;
+            //console.log(sum);
+        }
+        
+        return sum / courses.length;
+    }
     
 });
