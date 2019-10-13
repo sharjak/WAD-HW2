@@ -68,6 +68,11 @@ $(function () {
         hideAndClearForm();
     });
 
+
+    $('#cancel-course').click(function (event) {
+        hideAndClearForm();
+    });
+
     function calculateGPA() {
         let sum = 0;
         for (let i = 0; i < courses.length; i++) {
