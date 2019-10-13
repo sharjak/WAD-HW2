@@ -43,7 +43,19 @@ $(function () {
         $("#add-course").toggle();
     });
 
-    $("#save-course").click(function (event) {       
+    $("#save-course").click(function (event) {
+        // Add error class to empty fields
+        $("#add-course .input").each(function () {
+            if ($(this).val().trim() == '')
+                $(this).addClass('error');
+            else
+                $(this).removeClass('error');
+        });
+        
+        // If any field is empty, do not save
+        if ($("#add-course .input").hasClass("error"))
+            return;
+
         let inputTitle = $("#title").val();
         let inputSemester = $("#semester").val();
         let inputGrade = $("#grade").val();
@@ -67,7 +79,6 @@ $(function () {
         $("#gpa strong").text(calculateGPA());
         hideAndClearForm();
     });
-
 
     $('#cancel-course').click(function (event) {
         hideAndClearForm();

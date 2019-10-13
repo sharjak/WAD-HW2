@@ -192,3 +192,7 @@ table td {
 #add-course {
     display: none;
 }
+
+.error {
+    outline: 1px solid red;
+}
