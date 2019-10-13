@@ -65,7 +65,7 @@ $(function () {
         coursesTableBody.append(tr);
 
         $("#gpa strong").text(calculateGPA());
-
+        hideAndClearForm();
     });
 
     function calculateGPA() {
@@ -81,6 +81,14 @@ $(function () {
         }
         
         return sum / courses.length;
+    }
+
+    function hideAndClearForm() {
+        $("#add-course").toggle();
+        $('#add-course input').each(function () {
+              $(this).val('');
+            }
+        );
     }
     
 });
